@@ -1,0 +1,30 @@
+﻿@page "/opening/{id}"
+@using DataAccess.Models
+@using ApiCalls
+
+<PageTitle>@opening.OpeningName</PageTitle>
+
+<h1>@opening.OpeningName</h1>
+<dl>
+    <dt>name</dt>
+    <dd>@opening.OpeningName</dd>
+    <dt>creator</dt>
+    <dd>@opening.CreatorName</dd>
+    <dt>description</dt>
+    <dd>@opening.Description</dd>
+    <dt>pgn</dt>
+    <dd>@opening.OpeningPGN</dd> 
+</dl>
+
+
+@code {
+    [Parameter]
+    public string id { get; set; } = "1";
+
+    private OpeningModel? opening;
+
+    protected override async Task OnInitializedAsync()
+    {
+        opening = await ChessOpeningHubAPI.GetOpening(int.Parse(id));
+    }
+}

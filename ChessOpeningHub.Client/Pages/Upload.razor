@@ -1,0 +1,44 @@
+﻿@page "/upload/"
+@using DataAccess.Models
+@using ApiCalls
+
+<PageTitle>upload your opening</PageTitle>
+
+<h1>@opening.OpeningName</h1>
+<EditForm Model=@opening OnSubmit=@FormSubmitted>
+    <div class="form-group">
+        <label for="Opening-Name">Opening Name</label>
+        <InputText @bind-Value=opening.OpeningName class="form-control" id="OpeningName" />
+    </div>
+    <div class="form-group">
+        <label for="Creator-Name">Creator Name</label>
+        <InputText @bind-Value=opening.CreatorName class="form-control" id="CreatorName" />
+    </div>    
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <InputText @bind-Value=opening.Description class="form-control" id="Description" />
+    </div>
+    <div class="form-group">
+        <label for="PGN">pgn</label>
+        <InputText @bind-Value=opening.OpeningPGN class="form-control" id="OpeningPgn" />
+    </div>
+    <input type="submit" class="btn btn-primary" value="Save" />
+</EditForm>
+
+@code {
+    OpeningModel opening = new();
+    string LastSubmitResult;
+
+    async void FormSubmitted(EditContext editContext)
+    {
+        bool formIsValid = editContext.Validate();
+        LastSubmitResult =
+          formIsValid
+          ? "Success - form was valid"
+          : "Failure - form was invalid";
+        if (formIsValid)
+        {
+            await ChessOpeningHubAPI.PostOpening(opening);
+        }
+    }
+}

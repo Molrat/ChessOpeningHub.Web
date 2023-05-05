@@ -1,0 +1,48 @@
+﻿@page "/openings"
+@using DataAccess.Models
+@using ApiCalls
+
+<PageTitle>Openings</PageTitle>
+
+<h1>Openings</h1>
+
+<p>Get all openings uploaded by chess players</p>
+
+@if (openings == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Opening name</th>
+                <th>creator name</th>
+                <th>description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var opening in openings)
+            {
+                <tr>
+                    <td><a href=@($"/opening/{opening.Id}")> @opening.OpeningName </a></td>
+                    <td>@opening.CreatorName</td>
+                    <td>@opening.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+
+    private OpeningModel[]? openings;
+
+    protected override async Task OnInitializedAsync()
+    {
+        openings = await ChessOpeningHubAPI.GetOpenings();
+    }
+
+
+}

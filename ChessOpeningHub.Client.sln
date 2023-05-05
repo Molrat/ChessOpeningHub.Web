@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessOpeningHub.Client", "ChessOpeningHub.Client\ChessOpeningHub.Client.csproj", "{056A0468-6959-4E0C-93B7-065AB37FC7CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{056A0468-6959-4E0C-93B7-065AB37FC7CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056A0468-6959-4E0C-93B7-065AB37FC7CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056A0468-6959-4E0C-93B7-065AB37FC7CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056A0468-6959-4E0C-93B7-065AB37FC7CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37EA61E0-521E-4953-A1F6-6867828FF773}
+	EndGlobalSection
+EndGlobal
