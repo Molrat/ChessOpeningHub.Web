@@ -2,7 +2,7 @@
 using System.Net;
 using DataAccess.Models;
 
-namespace ChessOpeningHub.Client.ApiCalls
+namespace ChessOpeningHub.Web.ApiCalls
 {
     internal static class ChessOpeningHubAPI
     {

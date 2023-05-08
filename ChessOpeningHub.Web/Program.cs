@@ -1,4 +1,4 @@
-using ChessOpeningHub.Client;
+using ChessOpeningHub.Web;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
