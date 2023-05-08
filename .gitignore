@@ -1,4 +1,5 @@
 
 .vs/
-ChessOpeningHub.Client/bin/
-ChessOpeningHub.Client/obj/
+ChessOpeningHub.Web/bin/
+ChessOpeningHub.Web/obj/
+ChessOpeningHub.Web/wwwroot/
