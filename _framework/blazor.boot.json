@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "ChessOpeningHub.Client.dll": "sha256-Och9Rq6E1qYfWbu5Yom5Xkovp0W80ivjT+\/thwYeapY=",
+      "ChessOpeningHub.Client.dll": "sha256-5099xPhCnihQCoND3Zei02FO6lBiwXybG0yo9cP6gTw=",
       "Microsoft.AspNetCore.Components.dll": "sha256-3d4C6cAuLugykWpWsitqQUvlndZ9H5vf41xEFBOSOAw=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-VsP2n1UqkyRm\/+txXQraFwKN6mE1eDdGtzurMGnElVY=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-eYiNikrA\/LfS71akO95HzRnYTAwkWNUh+rnlr1tMf6E=",
