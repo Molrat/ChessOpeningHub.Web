@@ -2,3 +2,5 @@
 .vs/
 ChessOpeningHub.Client/bin/
 ChessOpeningHub.Client/obj/
+ChessOpeningHub.Client/Properties/
+ChessOpeningHub.Client/ChessOpeningHub.Client.csproj.user
