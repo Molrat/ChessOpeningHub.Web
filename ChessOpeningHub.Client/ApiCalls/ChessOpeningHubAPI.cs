@@ -11,7 +11,7 @@ namespace ChessOpeningHub.Client.ApiCalls
         internal static async Task<OpeningModel[]?> GetOpenings()
         {
             OpeningModel[]? openings = null;
-            HttpResponseMessage response = await client.GetAsync("https://localhost:7204/Openings");
+            HttpResponseMessage response = await client.GetAsync("https://rotten-berries-poke.loca.lt/Openings");
             if (response.IsSuccessStatusCode)
             {
                 openings = await response.Content.ReadFromJsonAsync<OpeningModel[]>();
@@ -22,7 +22,7 @@ namespace ChessOpeningHub.Client.ApiCalls
         internal static async Task<OpeningModel?> GetOpening(int id)
         {
             OpeningModel? opening = null;
-            HttpResponseMessage response = await client.GetAsync($"https://localhost:7204/Openings/{id}");
+            HttpResponseMessage response = await client.GetAsync($"https://rotten-berries-poke.loca.lt/Openings/{id}");
             if (response.IsSuccessStatusCode)
             {
                 opening = await response.Content.ReadFromJsonAsync<OpeningModel>();
@@ -33,7 +33,7 @@ namespace ChessOpeningHub.Client.ApiCalls
         internal static async Task<Uri> PostOpening(OpeningModel opening)
         {
             HttpResponseMessage response = await client.PostAsJsonAsync(
-                "https://localhost:7204/Openings", opening);
+                "https://rotten-berries-poke.loca.lt/Openings", opening);
             response.EnsureSuccessStatusCode();
 
             return response.Headers.Location;
@@ -42,7 +42,7 @@ namespace ChessOpeningHub.Client.ApiCalls
         internal static async Task<HttpStatusCode> PutOpening(OpeningModel opening)
         {
             HttpResponseMessage response = await client.PutAsJsonAsync(
-                $"https://localhost:7204/Openings/{opening.Id}", opening);
+                $"https://rotten-berries-poke.loca.lt/Openings/{opening.Id}", opening);
             response.EnsureSuccessStatusCode();
             return response.StatusCode;
 
@@ -51,7 +51,7 @@ namespace ChessOpeningHub.Client.ApiCalls
         internal static async Task<HttpStatusCode> DeleteOpening(string id)
         {
             HttpResponseMessage response = await client.DeleteAsync(
-                $"https://localhost:7204/Openings/{id}");
+                $"https://rotten-berries-poke.loca.lt/Openings/{id}");
             return response.StatusCode;
         }
     }
