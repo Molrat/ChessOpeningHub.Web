@@ -47,6 +47,7 @@ else
     protected override async Task OnInitializedAsync()
     {
         openings = await ChessOpeningHubAPI.GetOpenings();
+        SetCurrentOpeningId(0);
     }
 
     public async void SetCurrentOpeningId(int id)
