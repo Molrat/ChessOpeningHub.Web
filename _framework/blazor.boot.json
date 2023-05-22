@@ -8,7 +8,7 @@
   "resources": {
     "assembly": {
       "Blazored.SessionStorage.dll": "sha256-Y5WVl4GeKE4HMIAYngGySxcPse+7tZjlwyN0jaZSWS4=",
-      "ChessOpeningHub.Client.dll": "sha256-6RR8SRdGBzSzq6ZZ9lIX3mPiQX3brrjhKINBwS3v9mA=",
+      "ChessOpeningHub.Client.dll": "sha256-TdO5xYIHATHvXK08IVwgUZU8EVXlVFGuPz4RsUfyVE0=",
       "Microsoft.AspNetCore.Components.dll": "sha256-HE9ECNClLBGs7OdfVme9JI0b16x4mh3A2QRXJey61E8=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-VsP2n1UqkyRm\/+txXQraFwKN6mE1eDdGtzurMGnElVY=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-eYiNikrA\/LfS71akO95HzRnYTAwkWNUh+rnlr1tMf6E=",
