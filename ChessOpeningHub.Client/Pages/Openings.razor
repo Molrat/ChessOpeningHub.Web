@@ -26,7 +26,7 @@ else
             @foreach (var opening in openings)
             {
                 <tr>
-                    <td><a href=@($"/{opening.Id}")> @opening.OpeningName </a></td>
+                    <td><a href=@($"/opening/{opening.Id}")> @opening.OpeningName </a></td>
                     <td>@opening.CreatorName</td>
                     <td>@opening.Description</td>
                 </tr>
