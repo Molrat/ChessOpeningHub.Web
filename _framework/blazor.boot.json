@@ -8,7 +8,7 @@
   "resources": {
     "assembly": {
       "Blazored.SessionStorage.dll": "sha256-Y5WVl4GeKE4HMIAYngGySxcPse+7tZjlwyN0jaZSWS4=",
-      "ChessOpeningHub.Client.dll": "sha256-hmAhe7n3pkF\/56iUONXV1AQxms6Uvg3lNgMPsKA7d1E=",
+      "ChessOpeningHub.Client.dll": "sha256-GdZvxlGgPprcwyIU4XKCxMKTDzdVlL6oopOg\/rAgd9U=",
       "Microsoft.AspNetCore.Components.dll": "sha256-HE9ECNClLBGs7OdfVme9JI0b16x4mh3A2QRXJey61E8=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-VsP2n1UqkyRm\/+txXQraFwKN6mE1eDdGtzurMGnElVY=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-eYiNikrA\/LfS71akO95HzRnYTAwkWNUh+rnlr1tMf6E=",
@@ -41,7 +41,7 @@
       "System.ObjectModel.dll": "sha256-ZgvaKcoUKmSjtgGTwLjNBjRfQkTlUOXUWq7ckPdtxb8=",
       "System.Private.CoreLib.dll": "sha256-usZUk8coeD8frDPwzEuXlqY+H0y0j0E1GG1ZImKfTSY=",
       "System.Private.Uri.dll": "sha256-NVHcwf8oFRZ5ZZe+0DXxt8HzWz6lV2R\/\/vLtaqqw+1w=",
-      "System.Runtime.dll": "sha256-hdJ85hnAF3AxtMCcbGNaE+fssS4zyxvzXH+x2IWdi1U=",
+      "System.Runtime.dll": "sha256-5DFTG15vgbc8KMn6zTqb7DzJ8xarpfR8ZzctrJaNo3g=",
       "System.Runtime.InteropServices.JavaScript.dll": "sha256-xQbATUiyP+9FskXnIZjMPfWI2fliO8eL9DW2ykdx4AY=",
       "System.Text.Encodings.Web.dll": "sha256-dBAu8sl6qcNjD5aAePrxOnRjOf3o+OZvh4IohTnfsNE=",
       "System.Text.Json.dll": "sha256-cjjK0nFH1CAYx9wUEIHV5kxwrl\/ojib5Ikj0\/XaKD9s=",
