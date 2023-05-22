@@ -47,6 +47,6 @@ else
 
     public async void SetCurrentOpeningId(int id)
     {
-        await sessionStorage.SetItemAsync<int>("currentOpeningId", 1);
+        await sessionStorage.SetItemAsync<int>("currentOpeningId", id);
     }
 }
