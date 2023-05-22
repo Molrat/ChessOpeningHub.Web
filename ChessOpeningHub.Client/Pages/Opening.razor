@@ -1,4 +1,5 @@
 ﻿@page "/opening"
+@using System.IO
 @using DataAccess.Models
 @using ApiCalls
 @inject Blazored.SessionStorage.ISessionStorageService sessionStorage
@@ -24,7 +25,8 @@
     protected override async Task OnInitializedAsync()
     {
         int openingId = 0;
-        while (openingId == 0)
+        var currentTime = DateTime.Now;
+        while (openingId == 0 && (DateTime.Now - currentTime).TotalSeconds < 1)
         {
             openingId = await sessionStorage.GetItemAsync<int>("currentOpeningId");
         }
