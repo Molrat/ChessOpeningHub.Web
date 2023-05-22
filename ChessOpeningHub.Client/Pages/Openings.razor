@@ -27,7 +27,11 @@ else
             @foreach (var opening in openings)
             {
                 <tr>
-                    <td @onclick="() => SetCurrentOpeningId(opening.Id)"><a href=@($"/opening")> @opening.OpeningName </a></td>
+                    <td @onclick="() => SetCurrentOpeningId(opening.Id)">
+                        <NavLink class="nav-link" href="opening">
+                            <span class="oi oi-list-rich" aria-hidden="true"></span> @opening.OpeningName
+                        </NavLink>
+                    </td>
                     <td>@opening.CreatorName</td>
                     <td>@opening.Description</td>
                 </tr>
