@@ -1,6 +1,7 @@
-﻿@page "/opening/{id}"
+﻿@page "/opening/"
 @using DataAccess.Models
 @using ApiCalls
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <PageTitle>@opening.OpeningName</PageTitle>
 
@@ -18,13 +19,15 @@
 
 
 @code {
-    [Parameter]
-    public string id { get; set; } = "1";
-
     private OpeningModel? opening;
 
     protected override async Task OnInitializedAsync()
     {
-        opening = await ChessOpeningHubAPI.GetOpening(int.Parse(id));
+        int openingId = 0;
+        while (openingId == 0)
+        {
+            openingId = await sessionStorage.GetItemAsync<int>("currentOpeningId");
+        }
+        opening = await ChessOpeningHubAPI.GetOpening(openingId);
     }
 }

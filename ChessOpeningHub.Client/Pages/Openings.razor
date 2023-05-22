@@ -1,6 +1,7 @@
 ﻿@page "/openings"
 @using DataAccess.Models
 @using ApiCalls
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <PageTitle>Openings</PageTitle>
 
@@ -26,7 +27,7 @@ else
             @foreach (var opening in openings)
             {
                 <tr>
-                    <td><a href=@($"/opening/{opening.Id}")> @opening.OpeningName </a></td>
+                    <td @onclick="() => SetCurrentOpeningId(opening.Id)"><a href=@($"/opening")> @opening.OpeningName </a></td>
                     <td>@opening.CreatorName</td>
                     <td>@opening.Description</td>
                 </tr>
@@ -44,5 +45,8 @@ else
         openings = await ChessOpeningHubAPI.GetOpenings();
     }
 
-
+    public async void SetCurrentOpeningId(int id)
+    {
+        await sessionStorage.SetItemAsync<int>("currentOpeningId", 1);
+    }
 }
