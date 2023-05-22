@@ -8,10 +8,13 @@ namespace ChessOpeningHub.Client.ApiCalls
     {
         static HttpClient client = new HttpClient();
 
+        static string baseAdress = "https://8213-84-105-129-218.ngrok-free.app/openings/";
+
         internal static async Task<OpeningModel[]?> GetOpenings()
         {
+            client.DefaultRequestHeaders.Add("ngrok-skip-browser-warning", "true");
             OpeningModel[]? openings = null;
-            HttpResponseMessage response = await client.GetAsync("https://localhost:7204/Openings");
+            HttpResponseMessage response = await client.GetAsync(baseAdress);
             if (response.IsSuccessStatusCode)
             {
                 openings = await response.Content.ReadFromJsonAsync<OpeningModel[]>();
@@ -22,7 +25,7 @@ namespace ChessOpeningHub.Client.ApiCalls
         internal static async Task<OpeningModel?> GetOpening(int id)
         {
             OpeningModel? opening = null;
-            HttpResponseMessage response = await client.GetAsync($"https://localhost:7204/Openings/{id}");
+            HttpResponseMessage response = await client.GetAsync($"{baseAdress}{id}");
             if (response.IsSuccessStatusCode)
             {
                 opening = await response.Content.ReadFromJsonAsync<OpeningModel>();
@@ -33,7 +36,7 @@ namespace ChessOpeningHub.Client.ApiCalls
         internal static async Task<Uri> PostOpening(OpeningModel opening)
         {
             HttpResponseMessage response = await client.PostAsJsonAsync(
-                "https://localhost:7204/Openings", opening);
+                baseAdress, opening);
             response.EnsureSuccessStatusCode();
 
             return response.Headers.Location;
@@ -42,7 +45,7 @@ namespace ChessOpeningHub.Client.ApiCalls
         internal static async Task<HttpStatusCode> PutOpening(OpeningModel opening)
         {
             HttpResponseMessage response = await client.PutAsJsonAsync(
-                $"https://localhost:7204/Openings/{opening.Id}", opening);
+                $"{baseAdress}{opening.Id}", opening);
             response.EnsureSuccessStatusCode();
             return response.StatusCode;
 
@@ -51,7 +54,7 @@ namespace ChessOpeningHub.Client.ApiCalls
         internal static async Task<HttpStatusCode> DeleteOpening(string id)
         {
             HttpResponseMessage response = await client.DeleteAsync(
-                $"https://localhost:7204/Openings/{id}");
+                $"{baseAdress}{id}");
             return response.StatusCode;
         }
     }
