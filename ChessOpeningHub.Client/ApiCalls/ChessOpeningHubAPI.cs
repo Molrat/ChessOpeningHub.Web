@@ -24,6 +24,7 @@ namespace ChessOpeningHub.Client.ApiCalls
 
         internal static async Task<OpeningModel?> GetOpening(int id)
         {
+            client.DefaultRequestHeaders.Add("ngrok-skip-browser-warning", "true");
             OpeningModel? opening = null;
             HttpResponseMessage response = await client.GetAsync($"{baseAdress}{id}");
             if (response.IsSuccessStatusCode)
@@ -35,6 +36,7 @@ namespace ChessOpeningHub.Client.ApiCalls
 
         internal static async Task<Uri> PostOpening(OpeningModel opening)
         {
+            client.DefaultRequestHeaders.Add("ngrok-skip-browser-warning", "true");
             HttpResponseMessage response = await client.PostAsJsonAsync(
                 baseAdress, opening);
             response.EnsureSuccessStatusCode();
@@ -44,6 +46,7 @@ namespace ChessOpeningHub.Client.ApiCalls
 
         internal static async Task<HttpStatusCode> PutOpening(OpeningModel opening)
         {
+            client.DefaultRequestHeaders.Add("ngrok-skip-browser-warning", "true");
             HttpResponseMessage response = await client.PutAsJsonAsync(
                 $"{baseAdress}{opening.Id}", opening);
             response.EnsureSuccessStatusCode();
@@ -53,6 +56,7 @@ namespace ChessOpeningHub.Client.ApiCalls
 
         internal static async Task<HttpStatusCode> DeleteOpening(string id)
         {
+            client.DefaultRequestHeaders.Add("ngrok-skip-browser-warning", "true");
             HttpResponseMessage response = await client.DeleteAsync(
                 $"{baseAdress}{id}");
             return response.StatusCode;
